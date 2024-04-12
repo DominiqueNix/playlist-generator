@@ -1,7 +1,27 @@
 <div id="nav-bar" class="w-75 m-auto mt-3 px-4 py-2">
     <ul class="d-flex flex-row justify-content-between w-100 list-group align-items-center">
-        <li class="list-group-link active-tab">Home</li>
-        <li class="list-group-link">Browse</li>
-        <li class="list-group-link">Generate Playlist</li>
+        <li class="list-group-link">
+           <a routerLink="/"
+           routerLinkActive="active-tab"
+           [routerLinkActiveOptions]="{ exact: true }"
+           >
+            Home
+        </a> 
+        </li>
+        <li class="list-group-link">
+           <a routerLink="/browse"
+                routerLinkActive="active-tab"
+                ariaCurrentWhenActive="page"
+           >
+           Browse
+        </a> 
+        </li>
+        <li class="list-group-link">
+            <a routerLink="/getstarted"
+                routerLinkActive="active-tab"
+                ariaCurrentWhenActive="page">
+                Generate Playlist
+        </a>
+        </li>
     </ul>
 </div>
