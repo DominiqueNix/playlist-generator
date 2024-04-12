@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --app-background: #212121;
+    --text-color: #fff;
+}
+
+body {
+    background-color: var(--app-background) !important;
+    color: var(--text-color) !important;
+}
