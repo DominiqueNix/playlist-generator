@@ -40,7 +40,9 @@
     color: #fff;
     border: none;
     padding: 10px 20px;
-    font-weight: 200;
+    font-weight: 200;   
+    margin-bottom: 10px;
+
 }
 
 .button:hover{
@@ -48,16 +50,16 @@
 }
 
 
-@keyframes buttonHover {
+/* @keyframes buttonHover {
     from {
         transform: scale(1);
         box-shadow: none;
     }
      to {
         transform: scale(1.1);
-        box-shadow:5px 5px 5px #000000;   
+        box-shadow: 10px 5px 10px #000000;   
     }
-}
+} */
 
 
 .button-text:hover{
