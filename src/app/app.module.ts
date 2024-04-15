@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { BrowseComponent } from './browse/browse.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { GetSpecificComponent } from './get-specific/get-specific.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     LandingPageComponent,
     NavComponent,
     BrowseComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    GetSpecificComponent,
+    PlaylistComponent
   ],
   imports: [
     BrowserModule,
