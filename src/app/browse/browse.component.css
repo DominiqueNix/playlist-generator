@@ -1,0 +1,132 @@
+.browse-container{
+    margin: 5% 0px;
+
+}
+
+.gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(8, 2.5vh);
+    grid-gap: 1rem;
+}
+
+.box-1{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#D885FF, #75D6FF);
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.box-2{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#70F6FF, #9FFF87);
+    border-radius: 10px;
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.box-3{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#FFF27D, #CF81FF);
+    border-radius: 10px;
+    grid-column-start: 9;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: 8;
+}
+.box-4{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(-90deg, #FF7979, #76FFCE);
+    border-radius: 10px;
+    grid-column-start: 14;
+    grid-column-end: 19;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.box-5{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#FF85B8, #B173FF);
+    border-radius: 10px;
+    grid-column-start: 19;
+    grid-column-end: 22;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.box-6{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(90deg, #81FF86, #817FFF);
+    border-radius: 10px;
+    grid-column-start: 22;
+    grid-column-end: 25;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.box-7{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#FF7979, #FDC26B);
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 8;
+}
+.box-8{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(90deg, #FFF171, #69E4FF);
+    border-radius: 10px;
+    grid-column-start: 14;
+    grid-column-end: 21;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.box-9{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#FFA8B8, #6B8CFF);
+    border-radius: 10px;
+    border-radius: 10px;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+
+span{
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+th{
+    color: #acacac;
+    font-weight: 200;
+    padding: .5rem;
+}
+
+td{
+    font-weight: 200;
+    border-top: #606060 solid 1px;  
+    max-width: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: .5rem;
+}
+
+tr:last-child{
+    border-bottom: #606060 solid 1px; 
+}
+
+.track-name-col{
+    max-width: 20vw;  
+}

@@ -7,7 +7,7 @@
     background-image: linear-gradient(45deg, #FFD467, #FF7A7A);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 100%;
+    background-size: 50%;
 }
 
 input[type="range"] {
@@ -16,17 +16,17 @@ input[type="range"] {
     height: 2rem;
     z-index: 10 !important; 
     position: relative;
+    /* box-shadow: #fff 0px 5px 15px; */
 }
 
-/* .line-bg{
-    height: 20px;
-    width: 75%;
-    position: absolute;
-    background-color: #fff;
-    top: 41.5%;
-    z-index: 1;
-    border-radius: ;
-} */
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb{
+    border: 2px #fff solid;
+  }
+  /* Firefox */
+  input[type="range"]::-moz-range-thumb {
+   
+  }
 
 .get-specific-btn{
     position: relative;
@@ -59,4 +59,8 @@ input[type="range"] {
        linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude; 
+}
+
+p, .form-label {
+    font-weight: 200;
 }
