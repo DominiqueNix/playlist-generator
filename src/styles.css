@@ -24,22 +24,41 @@ a {
     text-decoration: none;
 }
 
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 0px) {
+    html{
+        font-size: 12px;
+    }
+    h1{
+        background-size: 100%;
+    }
+}
+
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 40em) {
     html{
         font-size: 12px;
     }
-    
+
 }
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
+    html{
+        font-size: 20px;
+    }
 
 }
 
 /* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 64em) {
-
+    html{
+        font-size: 20px;
+    }
+    h1{
+        background-size: 50%;
+    }
 }
 
 /* Largest devices such as desktops (1280px and up) */

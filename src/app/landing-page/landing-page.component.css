@@ -1,5 +1,6 @@
-.container{
+.landing-page-container{
     margin-top: 10%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -48,19 +49,6 @@
 .button:hover{
     animation: buttonHover .5s ease-in   forwards ;
 }
-
-
-/* @keyframes buttonHover {
-    from {
-        transform: scale(1);
-        box-shadow: none;
-    }
-     to {
-        transform: scale(1.1);
-        box-shadow: 10px 5px 10px #000000;   
-    }
-} */
-
 
 .button-text:hover{
     background-image: linear-gradient(45deg, #7adfff, #ff71cf);

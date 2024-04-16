@@ -10,6 +10,11 @@
     grid-gap: 1rem;
 }
 
+.gallery > div:hover{
+    animation: .5s ease-in-out buttonHover forwards;
+    cursor: pointer;
+}
+
 .box-1{
     height:100%;
     width: 100%;
