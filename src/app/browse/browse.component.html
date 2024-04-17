@@ -29,28 +29,30 @@
             <div class="box-9 d-flex align-items-center justify-content-between text-center">
                 <span class="w-100 text-dark">{{topPlaylists.playlists.items[8].name}}</span>
             </div>
-        </div> 
-        <h1>NEW ALBUMS</h1>  
-        <table >
-            <tr>
-            <th>Album</th>    
-            <th></th>
-            <th>Artist</th> 
-            <th>Tracks</th>
-            <th>Relase date</th>
-            </tr>
-            <tr *ngFor=" let album of newAlbums.albums.items">
-                <td class="img" class="track-name-col">
-                   <img [src]="album.images[1].url"/> 
-                </td>
-                <td class="track-name-col">
-                   <span>{{album.name}}</span>
-                </td>
-                <td class="track-name-col">{{album.artists[0].name}}</td>
-                <td class="track-name-col">{{album.total_tracks}}</td>
-                <td class="track-name-col">{{album.release_date}}</td>  
-            </tr>
-        </table> 
+        </div>
+        <div *ngIf="newAlbums">
+            <h1>NEW ALBUMS</h1>  
+            <table >
+                <tr>
+                <th>Album</th>    
+                <th></th>
+                <th>Artist</th> 
+                <th>Tracks</th>
+                <th>Relase date</th>
+                </tr>
+                <tr *ngFor=" let album of newAlbums.albums.items">
+                    <td class="img" class="track-name-col">
+                    <img [src]="album.images[1].url"/> 
+                    </td>
+                    <td class="track-name-col">
+                    <span>{{album.name}}</span>
+                    </td>
+                    <td class="track-name-col">{{album.artists[0].name}}</td>
+                    <td class="track-name-col">{{album.total_tracks}}</td>
+                    <td class="track-name-col">{{album.release_date}}</td>  
+                </tr>  
+            </table>
+        </div>
     </div>    
 </div>
 
