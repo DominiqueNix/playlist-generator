@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-browse',
@@ -598,9 +599,12 @@ export class BrowseComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private apiService: ApiService ) { }
 
   ngOnInit(): void {
+    this.apiService.getAccessToken().subscribe((data:any) => {
+      console.log(data)
+    })
   }
 
 }
