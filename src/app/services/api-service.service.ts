@@ -10,6 +10,8 @@ export class ApiService{
   
   constructor(private http: HttpClient) { }
 
+  currentPlaylist: Observable<{}> = of({});
+
   getAccessToken(): Observable<{}> {
     const headers = new HttpHeaders({
       'Content-Type':'application/x-www-form-urlencoded'
@@ -29,6 +31,28 @@ export class ApiService{
           'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
         };
         return this.http.get('https://api.spotify.com/v1/browse/new-releases?limit=5', {headers})
+      })
+    )
+  }
+  
+  getTopPlaylists(): Observable<{}>{
+    return this.getAccessToken().pipe(
+      switchMap((accessToken:any) => {
+         const headers = {
+          'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
+        };
+        return this.http.get('https://api.spotify.com/v1/browse/featured-playlists?locale=sv_SE&limit=9', {headers})
+      })
+    )
+  }
+// TODO: need to fine a way to set the currentplaylist variable
+  getOnePlayList(playlistId: any): Observable<{}>{
+    return this.getAccessToken().pipe(
+      switchMap((accessToken:any) => {
+         const headers = {
+          'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
+        };
+        return this.http.get(`https://api.spotify.com/v1/playlists/${playlistId}?market=ES`, {headers})
       })
     )
   }

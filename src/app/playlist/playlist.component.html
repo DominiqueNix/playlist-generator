@@ -1,7 +1,7 @@
 <div class="playlist-container-wrapper d-flex justify-content-center align-items-center">
-    <div class="d-flex flex-column w-75">
-        <h1 class="playlist-title">YOUR PLAYLIST.</h1>
-        <table >
+    <div *ngIf="tracks" class="d-flex flex-column w-75">
+        <h1 class="playlist-title">Your Playlist</h1>
+        <table>
             <tr>
             <th>Track</th>    
             <th></th>

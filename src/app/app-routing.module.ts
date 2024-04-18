@@ -5,13 +5,15 @@ import { GetSpecificComponent } from './get-specific/get-specific.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PlaylistComponent } from './playlist/playlist.component';
+import { BrowsePlaylistComponent } from './browse-playlist/browse-playlist.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent}, 
   {path: 'browse', component: BrowseComponent}, 
   {path: 'getstarted', component: GetStartedComponent}, 
   {path: 'getspecific', component: GetSpecificComponent}, 
-  {path: 'playlist', component: PlaylistComponent}
+  {path: 'playlist', component: PlaylistComponent}, 
+  {path: 'browseplaylist/:id', component: BrowsePlaylistComponent}
 ];
 
 @NgModule({

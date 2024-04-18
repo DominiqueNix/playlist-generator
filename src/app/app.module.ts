@@ -11,6 +11,7 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { GetSpecificComponent } from './get-specific/get-specific.component';
 import { PlaylistComponent } from './playlist/playlist.component';
+import { BrowsePlaylistComponent } from './browse-playlist/browse-playlist.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PlaylistComponent } from './playlist/playlist.component';
     BrowseComponent,
     GetStartedComponent,
     GetSpecificComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    BrowsePlaylistComponent
   ],
   imports: [
     BrowserModule,

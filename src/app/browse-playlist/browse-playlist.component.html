@@ -1,0 +1,26 @@
+<div class="playlist-container-wrapper d-flex justify-content-center align-items-center">
+    <div *ngIf="data" class="d-flex flex-column w-75">
+        <h1 class="playlist-title">{{data.name.toUpperCase()}}</h1>
+        <table>
+            <tr>
+            <th>Track</th>    
+            <th></th>
+            <th>Artist</th> 
+            <th>Album</th>
+            <th>Time</th>
+            </tr>
+            <tr *ngFor=" let track of tracks">
+                <td class="img" class="track-name-col">
+                   <img [src]="track.track.album.images[2].url"/> 
+                </td>
+                <td class="track-name-col">
+                   <span>{{track.track.name}}</span>
+                </td>
+                <td class="track-name-col">{{track.track.artists[0].name}}</td>
+                <td class="track-name-col">{{track.track.album.name}}</td>
+                <td class="track-name-col">{{msConversion(track.track.duration_ms)}}</td>  
+            </tr>
+        </table>
+    </div>    
+</div>
+
