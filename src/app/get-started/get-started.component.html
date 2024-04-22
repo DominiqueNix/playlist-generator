@@ -7,87 +7,48 @@
       <div class="search-bar-container w-100 d-flex align-items-center justify-content-between">
         <div class="d-flex left-group">
           <div class="search-select">
-            <select id="selectGroup">
+            <select id="selectGroup" #selectGroup (change)="onSelectChange(selectGroup.value)">
               <option value="artist">Artist</option>
               <option value="genre">Genre</option>
-              <option value="song">Song</option>
+              <option value="track">Song</option>
             </select>
           </div>
-          <div *ngFor="let selected of testingChosen" class="h-25">
-            <div class="selected-badge d-block">
-              <button class="deleted-selected-btn"><i class='bx bxs-x-circle'></i></button>
-              <span class="selected-text">{{selected}}</span>
-              
+          <div *ngIf="chosenCriteria" class="d-flex align-items-center">
+            <div *ngFor="let selected of chosenCriteria" class="d-flex align-items-center">
+              <div class="selected-badge d-block">
+                <button class="deleted-selected-btn" (click)="removePick(selected)"><i class='bx bxs-x-circle'></i></button>
+                <span class="selected-text">{{selected.name}}</span>      
+              </div>
             </div>
           </div>
-          <input class="search-bar" type="text" placeholder="Search..."/>
+          <input (keyup)="updateUserInput($event)" class="search-bar" type="text" *ngIf="chosenCriteria.length<5" placeholder="Search..."/>
         </div>
-      
-        <button class="search-btn"><i class='bx bx-search'></i></button>
+        <button *ngIf="chosenCriteria.length<5" class="search-btn" (click)="search()"><i class='bx bx-search'></i></button>
       </div> 
     </div>
-
-    <!-- Holds search results -->
-    <!-- <div class="d-flex gap-3">
-      <div class="input-group mb-3 dropdown-input \">
-        <select class="w-100" id="selectGroup">
-          <option value="artist">Artist</option>
-          <option value="genre">Genre</option>
-          <option value="song">Song</option>
-        </select>
-      </div>
-      <div class="input-group mb-3 text-input">
-        <input type="text" class="form-control w-100" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-      </div>
+    <div *ngIf="searchResults" class="search-results">
+      <ng-template #artist [ngIf]="selectedType === 'artist'">
+        <table>
+          <tr *ngFor=" let item of (searchResults | async)?.artists?.items;index as i">
+              <td *ngIf="i<11" class="track-name-col" (click)="addCriteria(item)">{{item.name}}</td> 
+          </tr>
+        </table> 
+      </ng-template>
+      <ng-template #genre [ngIf]="selectedType === 'genre'">
+        <table>
+          <tr *ngFor="let item of (filteredGeneres | async); index as i">
+              <td *ngIf="i<11" class="track-name-col" (click)="addGenre(item)">{{item}}</td>
+          </tr>
+        </table>
+      </ng-template>  
+      <ng-template #song [ngIf]="selectedType === 'track'">
+        <table>
+          <tr *ngFor=" let item of (searchResults | async)?.tracks?.items;index as i">
+              <td *ngIf="i<11" class="track-name-col" (click)="addCriteria(item)"> {{item.name}} by {{item.artists[0].name}}</td>
+          </tr>
+        </table>
+      </ng-template>
     </div>
-    <div class="d-flex gap-3">
-        <div class="input-group mb-3 dropdown-input \">
-          <select class="w-100" id="selectGroup">
-            <option value="artist">Artist</option>
-            <option value="genre">Genre</option>
-            <option value="song">Song</option>
-          </select>
-        </div>
-        <div class="input-group mb-3 text-input">
-          <input type="text" class="form-control w-100" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-        </div>
-      </div>
-      <div class="d-flex gap-3">
-        <div class="input-group mb-3 dropdown-input \">
-          <select class="w-100" id="selectGroup">
-            <option value="artist">Artist</option>
-            <option value="genre">Genre</option>
-            <option value="song">Song</option>
-          </select>
-        </div>
-        <div class="input-group mb-3 text-input">
-          <input type="text" class="form-control w-100" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-        </div>
-      </div>
-      <div class="d-flex gap-3">
-        <div class="input-group mb-3 dropdown-input \">
-          <select class="w-100" id="selectGroup">
-            <option value="artist">Artist</option>
-            <option value="genre">Genre</option>
-            <option value="song">Song</option>
-          </select>
-        </div>
-        <div class="input-group mb-3 text-input">
-          <input type="text" class="form-control w-100" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-        </div>
-      </div>
-      <div class="d-flex gap-3">
-        <div class="input-group mb-3 dropdown-input \">
-          <select class="w-100" id="selectGroup">
-            <option value="artist">Artist</option>
-            <option value="genre">Genre</option>
-            <option value="song">Song</option>
-          </select>
-        </div>
-        <div class="input-group mb-3 text-input">
-          <input type="text" class="form-control w-100" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-        </div>
-      </div> -->
   </div>
   <a routerLink="/getspecific" class="m-auto w-25"><button class="get-started-btn w-100">Next</button></a>
 </div>

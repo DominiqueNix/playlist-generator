@@ -56,4 +56,26 @@ export class ApiService{
       })
     )
   }
+
+  search(type:string, query:string): Observable<{}>{
+    return this.getAccessToken().pipe(
+      switchMap((accessToken:any) => {
+         const headers = {
+          'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
+        };
+        return this.http.get(`https://api.spotify.com/v1/search?q=${query}&type=${type}`, {headers})
+      })
+    )
+  }
+
+  getGenres():  Observable<{}>{
+    return this.getAccessToken().pipe(
+      switchMap((accessToken:any) => {
+         const headers = {
+          'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
+        };
+        return this.http.get(`https://api.spotify.com/v1/recommendations/available-genre-seeds`, {headers})
+      })
+    )
+  }
 }
