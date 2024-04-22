@@ -3,7 +3,32 @@
   <h1 class="get-started-title">GET STARTED.</h1>
   <p class="my-2">Choose up to 5 options of any combination fo genre, artist, or song. First specify the cateegory of your choice (artist, song, or genre), then type the name in.</p>
   <div class="my-2">
-    <div class="d-flex gap-3">
+    <div>
+      <div class="search-bar-container w-100 d-flex align-items-center justify-content-between">
+        <div class="d-flex left-group">
+          <div class="search-select">
+            <select id="selectGroup">
+              <option value="artist">Artist</option>
+              <option value="genre">Genre</option>
+              <option value="song">Song</option>
+            </select>
+          </div>
+          <div *ngFor="let selected of testingChosen" class="h-25">
+            <div class="selected-badge d-block">
+              <button class="deleted-selected-btn"><i class='bx bxs-x-circle'></i></button>
+              <span class="selected-text">{{selected}}</span>
+              
+            </div>
+          </div>
+          <input class="search-bar" type="text" placeholder="Search..."/>
+        </div>
+      
+        <button class="search-btn"><i class='bx bx-search'></i></button>
+      </div> 
+    </div>
+
+    <!-- Holds search results -->
+    <!-- <div class="d-flex gap-3">
       <div class="input-group mb-3 dropdown-input \">
         <select class="w-100" id="selectGroup">
           <option value="artist">Artist</option>
@@ -62,7 +87,7 @@
         <div class="input-group mb-3 text-input">
           <input type="text" class="form-control w-100" aria-label="Default" aria-describedby="inputGroup-sizing-default">
         </div>
-      </div>
+      </div> -->
   </div>
   <a routerLink="/getspecific" class="m-auto w-25"><button class="get-started-btn w-100">Next</button></a>
 </div>

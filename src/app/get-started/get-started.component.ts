@@ -7,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetStartedComponent implements OnInit {
 
+  testingChosen: any = [
+    'Drake', 
+    'Pop', 
+    'Here comes the sun'
+  ]
+
+  testingArea:any = [
+    'Miley Cyrus', 
+    'Noah Cyrus', 
+    'Billy Ray Cyrus', 
+    'Beyonce', 
+    'Dua Lipa'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
