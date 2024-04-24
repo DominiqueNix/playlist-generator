@@ -24,9 +24,9 @@ input[type="range" i]::-webkit-slider-thumb{
     border: 2px #fff solid;
   }
   /* Firefox */
-  input[type="range"]::-moz-range-thumb {
-   
-  }
+input[type="range"]::-moz-range-thumb {
+    border: 2px #fff solid;
+ }
 
 .get-specific-btn{
     position: relative;

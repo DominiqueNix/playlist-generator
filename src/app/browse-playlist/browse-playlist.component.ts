@@ -22,7 +22,6 @@ export class BrowsePlaylistComponent implements OnInit {
         this.tracks = data.tracks.items 
       })
     }
-    
   }
 
   msConversion(time: number): string{
@@ -34,8 +33,6 @@ export class BrowsePlaylistComponent implements OnInit {
      if(secondsLeftOver < 10){
       return `${Math.round(mins)}:0${secondsLeftOver}`
      }
-
-
     return `${Math.round(mins)}:${secondsLeftOver}`
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api-service.service';
+import { Router } from '@angular/router';
+import { map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-get-specific',
@@ -6,10 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./get-specific.component.css']
 })
 export class GetSpecificComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  currentRecInput: any; 
+  options: any = {
+    popularity: null, 
+    energy: null, 
+    danceability: null,
+    acoustics: null 
+    
   }
 
+  constructor(private apiService: ApiService, private router: Router) { }
+
+  ngOnInit(): void {
+    this.apiService.recommendationInput.subscribe((data:any) => {
+      this.currentRecInput = data.getStartedInput
+    })
+  }
+
+  sliderChange(e:any){
+    this.options[e.target.id] = e.target.value
+  }
+
+  generatePlaylist(){
+    this.apiService.recommendationInput.next({getStartedInput: this.currentRecInput, getSpecificInput: this.options})
+    // this.apiService.uriBuilder({getStartedInput: this.currentRecInput, getSpecificInput: this.options}).subscribe((data: any) => console.log(data))
+    this.router.navigate(['/playlist'])
+  }
 }

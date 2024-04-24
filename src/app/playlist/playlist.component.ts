@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from '../services/api-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map } from 'rxjs';
+import { Observable, concatMap, map, of, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-playlist',
@@ -11,20 +11,27 @@ import { map } from 'rxjs';
 export class PlaylistComponent implements OnInit {
 
   tracks: any;
-  yourPlaylistTracks:any;
-  broswePlayListTracks:any;
+  searchString!: string;
 
   constructor( private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.activatedRoute.paramMap.pipe(map(() => {
-    //   this.tracks = window.history.state
+    // this.apiService.recommendationInput.pipe(
+    //   concatMap((inputData:any)=> {
+    //     console.log(inputData)
+    //         return this.apiService.uriBuilder(inputData)
+    //   }),
+    //   concatMap((uri: string) => {
+    //     return this.apiService.getReccomendations(uri)
+    //   })
+    // ).subscribe((data:any) => {
+    //   console.log(data)
+    //   this.tracks = data.tracks;
     //   console.log(this.tracks)
-    // }))
-    console.log(history.state.broswePlaylist.tracks.items)
-    if(history.state.broswePlaylist){
-      this.tracks = history.state.broswePlaylist.tracks.items
-    }
+    // })
+    this.apiService.getReccomendations('https://api.spotify.com/v1/recommendations?limit=10&seed_artists=0PCCGZ0wGLizHt2KZ7hhA2&target_popularity=0.9&target_energy=0.6&target_danceability=0.7').subscribe((data:any) => {
+      console.log(data)
+    })
   }
 
   msConversion(time: number): string{
