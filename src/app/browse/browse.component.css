@@ -1,8 +1,4 @@
-.browse-container{
-    margin: 5% 0px;
-}
-
-.gallery {
+ .gallery {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(8, 2.5vh);
@@ -150,92 +146,94 @@ table{
 }
 
 /* Small devices such as large phones (640px and up) */
-@media only screen and (min-width: 40em) {
+@media only screen and (max-width: 40em) {
     .gallery {
         display: grid;
-        grid-auto-flow: column;
-        grid-template-rows: repeat(8, 2.5vh);
+        grid-template-rows: repeat(16, .75rem);
+        grid-template-columns: repeat(16, .75rem);
         grid-gap: 1rem;
+        margin-bottom: 1.5rem;
+        width: fit-content;
     }
     .box-1{
         height:100%;
         width: 100%;
         background: linear-gradient(#D885FF, #75D6FF);
         border-radius: 10px;
-        /* grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 17;
         grid-row-start: 1;
-        grid-row-end: 5; */
+        grid-row-end: 4; 
     }
     .box-2{
         height:100%;
         width: 100%;
         background: linear-gradient(#70F6FF, #9FFF87);
         border-radius: 10px;
-        /* grid-column-start: 6;
+        grid-column-start: 1;
         grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 5; */
+        grid-row-start: 4;
+        grid-row-end: 11; 
     }
     .box-3{
         height:100%;
         width: 100%;
         background: linear-gradient(#FFF27D, #CF81FF);
         border-radius: 10px;
-        /* grid-column-start: 9;
-        grid-column-end: 14;
-        grid-row-start: 1;
-        grid-row-end: 8; */
+        grid-column-start: 1;
+        grid-column-end:9;
+        grid-row-start: 11;
+        grid-row-end: 14;
     }
     .box-4{
         height:100%;
         width: 100%;
         background: linear-gradient(-90deg, #FF7979, #76FFCE);
         border-radius: 10px;
-        /* grid-column-start: 14;
-        grid-column-end: 19;
-        grid-row-start: 1;
-        grid-row-end: 4; */
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 14;
+        grid-row-end: 17;
     }
     .box-5{
         height:100%;
         width: 100%;
         background: linear-gradient(#FF85B8, #B173FF);
         border-radius: 10px;
-        /* grid-column-start: 19;
-        grid-column-end: 22;
-        grid-row-start: 1;
-        grid-row-end: 4; */
+        grid-column-start: 9;
+        grid-column-end: 17;
+        grid-row-start: 4;
+        grid-row-end: 8;
     }
     .box-6{
         height:100%;
         width: 100%;
         background: linear-gradient(90deg, #81FF86, #817FFF);
         border-radius: 10px;
-        /* grid-column-start: 22;
-        grid-column-end: 25;
-        grid-row-start: 1;
-        grid-row-end: 4; */
+        grid-column-start: 9;
+        grid-column-end: 12;
+        grid-row-start: 8;
+        grid-row-end: 11;
     }
     .box-7{
         height:100%;
         width: 100%;
         background: linear-gradient(#FF7979, #FDC26B);
         border-radius: 10px;
-        /* grid-column-start: 1;
-        grid-column-end: 9;
-        grid-row-start: 5;
-        grid-row-end: 8; */
+        grid-column-start: 9;
+        grid-column-end: 12;
+        grid-row-start: 11;
+        grid-row-end: 14;
     }
     .box-8{
         height:100%;
         width: 100%;
         background: linear-gradient(90deg, #FFF171, #69E4FF);
         border-radius: 10px;
-        /* grid-column-start: 14;
-        grid-column-end: 21;
-        grid-row-start: 4;
-        grid-row-end: 8; */
+        grid-column-start: 6;
+        grid-column-end: 17;
+        grid-row-start: 14;
+        grid-row-end: 17;
     }
     .box-9{
         height:100%;
@@ -243,12 +241,18 @@ table{
         background: linear-gradient(#FFA8B8, #6B8CFF);
         border-radius: 10px;
         border-radius: 10px;
-        /* grid-column-start: 21;
-        grid-column-end: 25;
-        grid-row-start: 4;
-        grid-row-end: 8; */
+        grid-column-start: 12;
+        grid-column-end: 17;
+        grid-row-start: 8;
+        grid-row-end: 14;
     }
 
+    .playlist-continer{
+        align-items: center;
+    }
+    h1{
+        align-self: flex-start;
+    }
 }
 
 /* Medium devices such as tablets (768px and up) */

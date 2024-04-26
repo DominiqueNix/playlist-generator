@@ -10,19 +10,28 @@ body {
 }
 
 
-app-landing-page{
-    display: flex;
-    justify-content: center;
-    width:100vw;
-    overflow: hidden;
-    margin-top: 10%;
-}
+
 
 app-nav{
     display: flex;
     justify-content: center;
     width:100vw;
     overflow: hidden;
+}
+
+app-browse{
+    display: flex;
+    justify-content: center;
+    width:100vw;
+    overflow: hidden;
+    padding: 1rem;
+}
+app-landing-page{
+    display: flex;
+    justify-content: center;
+    width:100vw;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 @keyframes buttonHover {

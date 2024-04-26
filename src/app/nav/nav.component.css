@@ -6,7 +6,7 @@
     width: 90vw;
     overflow-x: hidden;
     margin-top: 1rem;
-    padding: 1%;
+    padding: .2rem;
 }
 
 .list-group-link{
@@ -21,9 +21,6 @@
     -webkit-text-fill-color: transparent;
     background-size: 100%;
     font-weight: 400;
-    /* border: 1px solid rgb(139, 139, 139);
-    border-radius: 30px;
-    padding: 4px 15px; */
 }
 
 .active-tab {
@@ -39,12 +36,3 @@ a {
 ul{
     margin: 0;
 }
-
-/* Small devices such as large phones (640px and up) */
-/* @media only screen and (max-width: 45em) {
-    #nav-bar {
-        width: 100%;
-        overflow: hidden;
-    }
-
-} */
