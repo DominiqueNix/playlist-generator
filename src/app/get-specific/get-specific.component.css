@@ -36,6 +36,7 @@ input[type="range"]::-moz-range-thumb {
     padding: 10px 20px;
     font-weight: 200;
     margin-top: 5% !important;
+    white-space: nowrap;
     /* border-width: 2px; */
     border: 0 solid transparent;
 }
