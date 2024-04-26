@@ -4,13 +4,13 @@
         <p class="mb-4">Optionally choose more criteria for your playlist. Leave slider unchanged if you don't wish to set the value.</p>
         <div class="my-3">
             <label for="popularity" class="form-label">Popularity</label>
-            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="popularity" min="0" max="1" step="0.01" value="null">
+            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="popularity" min="0" max="9" step="0.01" value="null">
             <label for="energy" class="form-label">Energy</label>
-            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="energy" min="0" max="1" step="0.01" value="null">
+            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="energy" min="0" max="9" step="0.01" value="null">
             <label for="danceability" class="form-label">Dance-ability</label>
-            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="danceability" min="0" max="1" step="0.01" value="null">
+            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="danceability" min="0" max="9" step="0.01" value="null">
             <label for="acoustics" class="form-label">Acoustics</label>
-            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="acoustics" min="0" max="1" step="0.01" value="null">
+            <input (change)="sliderChange($event)" type="range" class="custom-form-range" id="acoustics" min="0" max="9" step="0.01" value="null">
         </div>
         <a class="m-auto w-25"><button (click)="generatePlaylist()" class="get-specific-btn w-100">Generate your playlist</button></a>
     </div>

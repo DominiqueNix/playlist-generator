@@ -27,7 +27,7 @@ export class GetSpecificComponent implements OnInit {
   }
 
   sliderChange(e:any){
-    this.options[e.target.id] = e.target.value
+    this.options[e.target.id] = Math.round(e.target.value)
   }
 
   generatePlaylist(){
