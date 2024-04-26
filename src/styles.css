@@ -9,6 +9,22 @@ body {
     color: var(--text-color) !important;
 }
 
+
+app-landing-page{
+    display: flex;
+    justify-content: center;
+    width:100vw;
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+app-nav{
+    display: flex;
+    justify-content: center;
+    width:100vw;
+    overflow: hidden;
+}
+
 @keyframes buttonHover {
     from {
         transform: scale(1);

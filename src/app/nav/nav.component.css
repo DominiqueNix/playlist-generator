@@ -3,9 +3,10 @@
     background-color: #3b3b3b !important;
     border-radius: 30px;
     font-weight: 200;
-    width: 100%;
+    width: 90vw;
     overflow-x: hidden;
-    margin: auto;
+    margin-top: 1rem;
+    padding: 1%;
 }
 
 .list-group-link{
@@ -40,10 +41,10 @@ ul{
 }
 
 /* Small devices such as large phones (640px and up) */
-@media only screen and (max-width: 45em) {
+/* @media only screen and (max-width: 45em) {
     #nav-bar {
-        width: 70%;
+        width: 100%;
         overflow: hidden;
     }
 
-}
+} */

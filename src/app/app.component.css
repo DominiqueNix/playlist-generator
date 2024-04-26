@@ -1,3 +1,4 @@
-app-nav {
-   width:100%;
+.main-wrapper{
+    overflow-x: hidden;
+    position: fixed;
 }
