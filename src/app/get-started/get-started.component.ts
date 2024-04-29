@@ -12,15 +12,15 @@ export class GetStartedComponent implements OnInit {
   
   //array that holds values stored in pills 
   chosenCriteria: any = [];
-  //keeps track of what the user is searcgning for (e.g. artist, song, genre)
+  //keeps track of what the user is searching for (e.g. artist, song, genre)
   selectedType: string = 'artist';
   //string the user is searching for
   searchString!: string;
-  // The resutls from the search
+  // The results from the search
   searchResults: Observable<any> = of({});
-  // A filtered list of avalible genres basd on user input
+  // A filtered list of available genres based on user input
   filteredGeneres:Observable<any> = of([]);
-  // All avalible genres offered by spotify
+  // All available genres offered by spotify
   avalibleGenres: any;
 
   constructor(private apiService: ApiService, private router: Router) { }

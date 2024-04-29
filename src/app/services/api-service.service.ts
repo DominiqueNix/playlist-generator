@@ -96,7 +96,7 @@ export class ApiService{
         } else if(item.type === 'track'){
           tracks = tracks + `${item.id}%2C`
         } else if(item.type === 'genre'){
-          genres = genres + `${item.id}%2C`
+          genres = genres + `${item.name}%2C`
         }
       })
       if(obj.getSpecificInput.popularity !== null){
@@ -137,18 +137,5 @@ export class ApiService{
         return this.http.get(searchString, {headers})
       })
     )
-       // return searchString.pipe(
-    //   concatMap((uriString: string) => {
-    //    return this.getAccessToken().pipe(
-    //           switchMap((accessToken:any) => {
-    //             const headers = {
-    //               'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
-    //             };
-    //             return this.http.get(uriString, {headers})
-    //           })
-    //         )
-    //   })
-    // )
-  // }
   }
 }
