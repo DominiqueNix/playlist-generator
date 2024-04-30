@@ -23,7 +23,6 @@ export class PlaylistComponent implements OnInit {
       })
     ).subscribe((data:any) => {
       this.tracks = data.tracks;
-      console.log(this.tracks)
     })
   }
 

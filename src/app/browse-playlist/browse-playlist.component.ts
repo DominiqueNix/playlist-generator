@@ -14,11 +14,9 @@ export class BrowsePlaylistComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
-    console.log(id)
     if(id) {
       this.apiService.getOnePlayList(id).subscribe((data:any) => {
         this.data = data
-        console.log(this.data)
         this.tracks = data.tracks.items 
       })
     }
