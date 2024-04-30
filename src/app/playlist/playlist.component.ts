@@ -9,29 +9,22 @@ import { Observable, concatMap, map, of, switchMap } from 'rxjs';
   styleUrls: ['./playlist.component.css']
 })
 export class PlaylistComponent implements OnInit {
-
   tracks: any;
-  searchString!: string;
 
   constructor( private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.apiService.recommendationInput.pipe(
       concatMap((inputData:any)=> {
-        console.log(inputData)
             return this.apiService.uriBuilder(inputData)
       }),
       concatMap((uri: string) => {
         return this.apiService.getReccomendations(uri)
       })
     ).subscribe((data:any) => {
-      console.log(data)
       this.tracks = data.tracks;
       console.log(this.tracks)
     })
-    // this.apiService.getReccomendations('https://api.spotify.com/v1/recommendations?limit=10&seed_artists=0PCCGZ0wGLizHt2KZ7hhA2&target_popularity=9&target_energy=6&target_danceability=0.7').subscribe((data:any) => {
-    //   this.tracks = data.tracks
-    // })
   }
 
   msConversion(time: number): string{

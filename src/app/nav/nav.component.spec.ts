@@ -33,7 +33,7 @@ describe('NavComponent', () => {
     expect(html.querySelectorAll('.list-group-link').length).toBe(3)
   })
 
-  it('each nav-lick should have the corrent link', () => {
+  it('each nav-lick should have the correct link', () => {
     let html = fixture.nativeElement as HTMLElement
     let homeLink = html.querySelectorAll('a')[0]
     let browseLink = html.querySelectorAll('a')[1]
