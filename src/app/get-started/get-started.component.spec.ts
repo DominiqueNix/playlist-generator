@@ -25,4 +25,14 @@ describe('GetStartedComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a title', () => {
+    let html = fixture.nativeElement as HTMLElement
+    expect(html.querySelector('h1')?.textContent).toEqual('GET STARTED.')
+  })
+
+  it('should have a subtitle', () =>{
+    let html = fixture.nativeElement as HTMLElement
+    expect(html.querySelector('p')?.textContent).toEqual('Choose up to 5 options of any combination fo genre, artist, or song. First specify the cateegory of your choice (artist, song, or genre), then type the name in.')
+  })
 });
