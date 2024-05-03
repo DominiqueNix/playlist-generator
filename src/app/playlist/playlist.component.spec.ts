@@ -81,7 +81,7 @@ describe('PlaylistComponent', () => {
     expect(tableRow1.children[4].textContent).toEqual('0:00');
   })
 
-  it('should convert the duration to the corrct time when msConversion() is called', () => {
+  it('should convert the duration to the correct time when msConversion() is called', () => {
     let expected = "3:21";
 
     let actual = component.msConversion(201000);

@@ -23,4 +23,20 @@ describe('GetSpecificComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have four input sliders', () =>{
+    let html = fixture.nativeElement as HTMLElement
+    
+    expect(html.querySelectorAll('input').length).toBe(4)
+  })
+
+  it('should update the options object when sliderChange() is called', () =>{
+    component.sliderChange({target: {id: 'popularity', value: 2}})
+    expect(component.options).toEqual({popularity: 2, 
+      energy: null, 
+      danceability: null,
+      acoustics: null })
+    
+  })
+
 });

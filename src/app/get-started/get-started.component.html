@@ -1,7 +1,7 @@
 <div class="get-started-container-wrapper d-flex justify-content-center align-items-center">
 <div class="get-started-container d-flex flex-column w-75">
   <h1 class="get-started-title">GET STARTED.</h1>
-  <p class="my-2">Choose up to 5 options of any combination fo genre, artist, or song. First specify the cateegory of your choice (artist, song, or genre), then type the name in.</p>
+  <p class="my-2">Choose up to 5 options of any combination for genre, artist, or song. First specify the category of your choice (artist, song, or genre), then type the name in.</p>
   <div class="my-2">
     <div>
       <div class="search-bar-container w-100 d-flex align-items-center justify-content-between">
@@ -36,7 +36,7 @@
       </ng-template>
       <ng-template #genre [ngIf]="selectedType === 'genre'">
         <table>
-          <tr *ngFor="let item of (filteredGeneres | async); index as i">
+          <tr *ngFor="let item of (filteredGenres | async); index as i">
               <td *ngIf="i<11" class="track-name-col" (click)="addGenre(item)">{{item}}</td>
           </tr>
         </table>

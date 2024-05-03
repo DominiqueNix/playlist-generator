@@ -19,34 +19,34 @@ export class GetStartedComponent implements OnInit {
   // The results from the search
   searchResults: Observable<any> = of({});
   // A filtered list of available genres based on user input
-  filteredGeneres:Observable<any> = of([]);
+  filteredGenres:Observable<any> = of([]);
   // All available genres offered by spotify
-  avalibleGenres: any;
+  availableGenres: any;
 
   constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-    //populated avalible genres on init
+    //populated available genres on init
     this.apiService.getGenres().subscribe((data: any) => {
-      this.avalibleGenres = data.genres
+      this.availableGenres = data.genres
     })
   }
 
-  //will remove citeria from the chosen criteria array
+  //will remove criteria from the chosen criteria array
   removePick(selected: string): void{
-    let newTesting:any = [];
+    let newCriteria:any = [];
     for(let i = 0; i < this.chosenCriteria.length; i++){
-      if( selected !== this.chosenCriteria[i]){
-        newTesting.push(this.chosenCriteria[i])
+      if(selected !== this.chosenCriteria[i]){
+        newCriteria.push(this.chosenCriteria[i])
       }
     }
-    this.chosenCriteria = newTesting; 
+    this.chosenCriteria = newCriteria; 
   } 
 
-  //funtion will display the data the user has search for
+  //function will display the data the user has search for
   search(){
    if(this.selectedType === 'genre'){
-      this.filterGeneres(this.searchString)
+      this.filterGenres(this.searchString)
    } else {
     this.apiService.search(this.selectedType, this.searchString).subscribe((data: any) => {
       this.searchResults = of(data)   
@@ -100,15 +100,15 @@ export class GetStartedComponent implements OnInit {
 
 
   // generates a filtered array of genres based on user search
-  filterGeneres(input: string): void{
+  filterGenres(input: string): void{
     let searchArr:any[] = [];
-    for(let i = 0; i < this.avalibleGenres.length; i++){
+    for(let i = 0; i < this.availableGenres.length; i++){
         input.toLowerCase()
-        if(this.avalibleGenres[i].includes(input)){
-          searchArr = [...searchArr, this.avalibleGenres[i]]
+        if(this.availableGenres[i].includes(input)){
+          searchArr = [...searchArr, this.availableGenres[i]]
         }
     }
-    this.filteredGeneres = of(searchArr)
+    this.filteredGenres = of(searchArr)
   }
 
   next():void {

@@ -225,7 +225,7 @@ describe('ApiServiceService', () => {
     let searchString = 'https://api.spotify.com/v1/recommendations?limit=10&seed_artists=1%2C2%2C&seed_genres=pop%2Crock%2C&seed_tracks=1%2C&target_popularity=7&target_energy=6&target_acousticness=2'
 
     //subscribing to function call and setting the output
-    service.getReccomendations(searchString).subscribe((res:any) => {
+    service.getRecommendations(searchString).subscribe((res:any) => {
       returnedTracks = res
     })
     //mocking http call

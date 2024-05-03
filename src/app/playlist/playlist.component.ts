@@ -19,7 +19,7 @@ export class PlaylistComponent implements OnInit {
             return this.apiService.uriBuilder(inputData)
       }),
       concatMap((uri: string) => {
-        return this.apiService.getReccomendations(uri)
+        return this.apiService.getRecommendations(uri)
       })
     ).subscribe((data:any) => {
       this.tracks = data.tracks;

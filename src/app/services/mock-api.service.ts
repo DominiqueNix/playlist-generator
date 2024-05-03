@@ -7,11 +7,11 @@ import { BehaviorSubject, Observable, of} from 'rxjs';
 })
 export class MockApiService extends ApiService{
 
-  override recommendationInput!: BehaviorSubject<any>;
+  override recommendationInput: BehaviorSubject<any> = new BehaviorSubject({});
   override uriBuilder(obj: any): Observable<string> {
       return of('')
   }
-  override getReccomendations(searchString: string): Observable<{}> {
+  override getRecommendations(searchString: string): Observable<{}> {
       return of({ tracks:   [
         {
           "album": {
@@ -45,5 +45,116 @@ export class MockApiService extends ApiService{
         }
       ]
     });
+  }
+
+  override getGenres(): Observable<{}> {
+      return of(['pop', 'rock', 'test'])
+  }
+
+  override search(type: string, query: string): Observable<{}> {
+        return of({
+          "artists": {
+            "items": [
+              {
+                "id": "1",
+                "name": "artist 1",
+              }, 
+              {
+                "id": "2",
+                "name": "artist 2",
+              },
+            ]
+          }
+        })
+  }
+
+  override getOnePlayList(playlistId: any): Observable<{}> {
+      return of({
+        "name": "playlist",
+        "tracks": {
+          "items": [
+            {
+              "track": {
+                "name": "track name 1",
+                "duration_ms": 0,
+                
+                "album": {
+                  "name": "test album 1", 
+                   "images": [
+                    {"url": ""}, 
+                    {"url": ""},
+                    {
+                      "url": "google.com", 
+                    }
+                  ],
+                }, 
+                "artists": [{
+                  "name": "test artist 1"
+                }]
+              }, 
+            }, 
+            {
+              "track": {
+                "name": "track name 2",
+                "duration_ms": 0,
+               
+                "album": { 
+                  "name": "test album 2", 
+                   "images": [
+                  {"url": ""}, 
+                  {"url": ""},
+                  {
+                    "url": "google.com", 
+                  }
+                ],
+                }, 
+                "artists": [{
+                  "name": "test artist 2"
+                }]
+              }, 
+            }
+          ]
+        }
+      })
+  }
+  override getNewAlbums(): Observable<{}> {
+      return of({
+        "albums": {
+          "items": [
+            {
+              "album": {
+              "images": [
+                {"url": ""},
+                {"url": "test.com"},
+              ], 
+              "name": "test", 
+              "artists": [
+                {"name": "test artist"}
+              ], 
+              "total_tracks": 9, 
+              "release_date": "2023-12-12"
+            }
+          }, 
+          ]
+        }
+      })
+  }
+
+  override getTopPlaylists(): Observable<{}> {
+      return of({
+        "playlists": {
+          "items": [
+            {"name": "playlist"}, 
+            {"name": "playlist"}, 
+            {"name": "playlist"}, 
+            {"name": "playlist"}, 
+            {"name": "playlist"},
+            {"name": "playlist"},
+            {"name": "playlist"},
+            {"name": "playlist"},
+            {"name": "playlist"},
+          ]
+        }
+      })
   }
 }

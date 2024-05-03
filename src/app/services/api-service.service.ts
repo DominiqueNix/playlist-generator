@@ -128,7 +128,7 @@ export class ApiService{
     }
   }
   
-  getReccomendations(searchString: string): Observable<{}>{
+  getRecommendations(searchString: string): Observable<{}>{
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
          const headers = {

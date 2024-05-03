@@ -32,7 +32,6 @@ export class GetSpecificComponent implements OnInit {
 
   generatePlaylist(){
     this.apiService.recommendationInput.next({getStartedInput: this.currentRecInput, getSpecificInput: this.options})
-    // this.apiService.uriBuilder({getStartedInput: this.currentRecInput, getSpecificInput: this.options}).subscribe((data: any) => console.log(data))
     this.router.navigate(['/playlist'])
   }
 }
