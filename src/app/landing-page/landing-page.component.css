@@ -34,19 +34,8 @@
     font-weight: 200;
 }
 
-.button{
-    background-color: #3b3b3b !important;
-    border-radius: 20px;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 200;   
-    margin-bottom: 10px;
-
-}
-
-.button:hover{
-    animation: buttonHover .5s ease-in   forwards ;
+.button::before{
+    background: linear-gradient(45deg, #7adfff, #ff71cf);
 }
 
 .button-text:hover{

@@ -57,8 +57,9 @@ describe('GetStartedComponent', () => {
     component.selectedType = 'genre'
     component.searchString = 'o'
     component.availableGenres = ['pop', 'rock', 'test']
+    let event = {target: {value: component.searchString}}
     let actual1;
-    component.search()
+    component.search(event)
     component.filteredGenres.subscribe((data:any) => {
       actual1 = data
     })   
@@ -66,7 +67,7 @@ describe('GetStartedComponent', () => {
 
 
     component.selectedType = 'artist';
-    component.search()
+    component.search(event)
     let actual;
     component.searchResults.subscribe((data:any) => {
       actual = data

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api-service.service';
 import { ActivatedRoute } from '@angular/router';
+import { Utils } from '../utils/utils';
 
 @Component({
   selector: 'app-browse-playlist',
@@ -10,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class BrowsePlaylistComponent implements OnInit {
   data: any;
   tracks: any;
+  msConversion:any = Utils.msConversion; 
   constructor(private apiService: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,17 +22,5 @@ export class BrowsePlaylistComponent implements OnInit {
         this.tracks = data.tracks.items 
       })
     }
-  }
-
-  msConversion(time: number): string{
-    let seconds = time/1000
-     let secondsLeftOver = Math.round(seconds % 60);
-     
-     let mins = (seconds - secondsLeftOver) / 60
-
-     if(secondsLeftOver < 10){
-      return `${Math.round(mins)}:0${secondsLeftOver}`
-     }
-    return `${Math.round(mins)}:${secondsLeftOver}`
   }
 }

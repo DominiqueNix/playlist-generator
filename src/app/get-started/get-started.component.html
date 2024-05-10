@@ -21,9 +21,9 @@
               </div>
             </div>
           </div>
-          <input (keyup)="updateUserInput($event)" class="search-bar" type="text" *ngIf="chosenCriteria.length<5" placeholder="Search..."/>
+          <input (keyup.enter)="search($event)" (keyup)="updateUserInput($event)" class="search-bar" type="text" *ngIf="chosenCriteria.length<5" placeholder="Search..."/>
         </div>
-        <button *ngIf="chosenCriteria.length<5" class="search-btn" (click)="search()"><i class='bx bx-search'></i></button>
+        <button *ngIf="chosenCriteria.length<5" class="search-btn" (click)="search($event)" ><i class='bx bx-search'></i></button>
       </div> 
     </div>
     <div *ngIf="searchResults" class="search-results">
@@ -37,7 +37,7 @@
       <ng-template #genre [ngIf]="selectedType === 'genre'">
         <table>
           <tr *ngFor="let item of (filteredGenres | async); index as i">
-              <td *ngIf="i<11" class="track-name-col" (click)="addGenre(item)">{{item}}</td>
+              <td *ngIf="i<11" class="track-name-col" (click)="addGenre(item)">{{item}}</td>             
           </tr>
         </table>
       </ng-template>  
@@ -50,6 +50,6 @@
       </ng-template>
     </div>
   </div>
-  <a (click)="next()" class="m-auto w-25"><button class="get-started-btn w-100">Next</button></a>
+  <a (click)="next()" class="m-auto w-25"><button class="get-started-btn btn-gradient-border w-100">Next</button></a>
 </div>
 </div>

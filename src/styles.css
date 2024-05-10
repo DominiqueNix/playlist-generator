@@ -9,9 +9,6 @@ body {
     color: var(--text-color) !important;
 }
 
-
-
-
 app-nav{
     display: flex;
     justify-content: center;
@@ -47,6 +44,38 @@ app-landing-page{
 
 a {
     text-decoration: none;
+}
+
+.btn-gradient-border{
+    position: relative;
+    background-color: #3b3b3b !important;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 200;
+    margin-top: 5% !important;
+    white-space: nowrap;
+    border: 0 solid transparent;
+}
+
+.btn-gradient-border::before{
+    content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px; 
+  padding: 3px; 
+  mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+
+.btn-gradient-border:hover{
+    animation: buttonHover .5s ease-in   forwards ;
 }
 
 

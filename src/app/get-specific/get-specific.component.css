@@ -26,37 +26,12 @@ input[type="range"]::-moz-range-thumb {
     border: 2px #fff solid;
  }
 
-.get-specific-btn{
-    position: relative;
-    background-color: #3b3b3b !important;
-    border-radius: 50px;
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: 200;
-    margin-top: 5% !important;
-    white-space: nowrap;
-    border: 0 solid transparent;
-}
-
 .get-specific-btn:hover{
     animation: buttonHover .5s ease-in   forwards ;
 }
 
 .get-specific-btn::before{
-    content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50px; 
-  padding: 3px; 
   background:linear-gradient(45deg, #FFD467, #FF7A7A);
-  mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude; 
 }
 
 p, .form-label {

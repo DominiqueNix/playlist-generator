@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from '../services/api-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, concatMap, map, of, switchMap } from 'rxjs';
+import { Utils } from '../utils/utils';
 
 @Component({
   selector: 'app-playlist',
@@ -10,6 +11,7 @@ import { Observable, concatMap, map, of, switchMap } from 'rxjs';
 })
 export class PlaylistComponent implements OnInit {
   tracks: any;
+  msConversion:any = Utils.msConversion
 
   constructor( private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
@@ -26,18 +28,18 @@ export class PlaylistComponent implements OnInit {
     })
   }
 
-  msConversion(time: number): string{
-    let seconds = time/1000
-     let secondsLeftOver = Math.round(seconds % 60);
+  // msConversion(time: number): string{
+  //   let seconds = time/1000
+  //    let secondsLeftOver = Math.round(seconds % 60);
      
-     let mins = (seconds - secondsLeftOver) / 60
+  //    let mins = (seconds - secondsLeftOver) / 60
 
-     if(secondsLeftOver < 10){
-      return `${Math.round(mins)}:0${secondsLeftOver}`
-     }
+  //    if(secondsLeftOver < 10){
+  //     return `${Math.round(mins)}:0${secondsLeftOver}`
+  //    }
 
 
-    return `${Math.round(mins)}:${secondsLeftOver}`
-  }
+  //   return `${Math.round(mins)}:${secondsLeftOver}`
+  // }
 
 }

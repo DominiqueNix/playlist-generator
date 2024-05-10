@@ -21,6 +21,7 @@
     margin-right: 1rem;
     border-right: solid 1px#6e6e6e;
     padding:.5rem .35rem;
+    min-width: fit-content;
 }
 #selectGroup{
     background-color: #3b3b3b;
@@ -107,38 +108,8 @@ tr:hover{
     -webkit-text-fill-color: transparent;
 }
 
-.get-started-btn{
-    position: relative;
-    background-color: #3b3b3b !important;
-    border-radius: 20px;
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: 200;
-    margin-top: 5% !important;
-    border-width: 5px;
-    border: 0 solid transparent;
-}
-
-.get-started-btn:hover{
-    animation: buttonHover .5s ease-in forwards;
-}
-
-
 .get-started-btn::before{
-    content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50px; 
-  padding: 3px; 
   background:linear-gradient(45deg, #B77FFF, #70F6FF); 
-  mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude; 
 }
 
 p {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, map, of, tap } from 'rxjs';
 import { ApiService } from '../services/api-service.service';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-get-started',
@@ -44,12 +45,16 @@ export class GetStartedComponent implements OnInit {
   } 
 
   //function will display the data the user has search for
-  search(){
+  search(event:any){
    if(this.selectedType === 'genre'){
       this.filterGenres(this.searchString)
    } else {
     this.apiService.search(this.selectedType, this.searchString).subscribe((data: any) => {
       this.searchResults = of(data)   
+      if(event.target.value){
+        event.target.value = ""
+      }
+      
     })
    }
   }
