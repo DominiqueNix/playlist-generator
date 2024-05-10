@@ -19,7 +19,6 @@ export class BrowseComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getNewAlbums().subscribe((data:any) => {
       this.newAlbums = data
-      console.log(data.albums.items)
     })
     this.apiService.getTopPlaylists().subscribe((data:any) => {
       this.topPlaylists = data

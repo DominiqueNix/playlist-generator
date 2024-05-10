@@ -18,7 +18,6 @@ export class BrowsePlaylistComponent implements OnInit {
       this.apiService.getOnePlayList(id).subscribe((data:any) => {
         this.data = data
         this.tracks = data.tracks.items 
-        console.log(this.tracks)
       })
     }
   }

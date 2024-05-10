@@ -122,7 +122,6 @@ export class MockApiService extends ApiService{
         "albums": {
           "items": [
             {
-              "album": {
               "images": [
                 {"url": ""},
                 {"url": "test.com"},
@@ -133,7 +132,6 @@ export class MockApiService extends ApiService{
               ], 
               "total_tracks": 9, 
               "release_date": "2023-12-12"
-            }
           }, 
           ]
         }
@@ -144,15 +142,15 @@ export class MockApiService extends ApiService{
       return of({
         "playlists": {
           "items": [
-            {"name": "playlist"}, 
-            {"name": "playlist"}, 
-            {"name": "playlist"}, 
-            {"name": "playlist"}, 
-            {"name": "playlist"},
-            {"name": "playlist"},
-            {"name": "playlist"},
-            {"name": "playlist"},
-            {"name": "playlist"},
+            {"name": "playlist", "id": 1}, 
+            {"name": "playlist", "id": 2}, 
+            {"name": "playlist", "id": 3}, 
+            {"name": "playlist", "id": 4}, 
+            {"name": "playlist", "id": 5},
+            {"name": "playlist", "id": 6},
+            {"name": "playlist", "id": 7},
+            {"name": "playlist", "id": 8},
+            {"name": "playlist", "id": 9},
           ]
         }
       })

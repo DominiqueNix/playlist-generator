@@ -34,11 +34,21 @@ describe('BrowseComponent', () => {
 
   it('should have playlists', () => {
     expect(component.newAlbums).toBeTruthy()
-    expect(component.newAlbums.albums.items[0].albums.name).toEqual('test')
+    expect(component.newAlbums.albums.items[0].name).toEqual('test')
   })
 
   it('should have albums', () =>{
     expect(component.topPlaylists).toBeTruthy()
     expect(component.topPlaylists.playlists.items[0].name).toEqual("playlist")
+  })
+
+  it('should have nine playlist divs', () => {
+    let html = fixture.nativeElement as HTMLElement
+   expect(html.querySelector('.gallery')?.children.length).toBe(9)
+  })
+
+  it('should have nine playlist divs', () => {
+    let html = fixture.nativeElement as HTMLElement
+   expect(html.querySelector('.gallery')?.children.length).toBe(9)
   })
 });
