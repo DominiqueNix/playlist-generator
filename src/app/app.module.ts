@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,18 +23,18 @@ import { BrowseAlbumComponent } from './components/browse-album/browse-album.com
     GetStartedComponent,
     GetSpecificComponent,
     PlaylistComponent,
-    BrowsePlaylistComponent, 
-    BrowseAlbumComponent
+    BrowsePlaylistComponent,
+    BrowseAlbumComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    RouterOutlet, 
-    RouterLink, 
-    RouterLinkActive, 
-    HttpClientModule
+    AppRoutingModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

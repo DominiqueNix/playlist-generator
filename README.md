@@ -30,10 +30,10 @@ This is a playlist genereator web app that utilizes the Spotify Web Api to let u
 3. Run the following scripts to get this project up and running locally:
 
  ``` javascript
-     // install necesarry dependencies
+     // install necessary dependencies
      npm install
 
-     // generate the environment.ts file containing secrects
+     // generate the environment.ts file containing secrets
      npm run config
 
      // run the angular program
@@ -53,10 +53,10 @@ Figma Mocks:
 Run the following scripts to get this project up and running locally:
 
  ``` javascript
-     // install necesarry dependencies (if not previously done)
+     // install necessary dependencies (if not previously done)
      npm install
 
-     // generate the environment.ts file containing secrects (if not previously done)
+     // generate the environment.ts file containing secrets (if not previously done)
      npm run config
 
      // run the tests

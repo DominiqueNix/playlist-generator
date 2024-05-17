@@ -1,38 +1,37 @@
-
 #nav-bar {
-    background-color: #3b3b3b !important;
-    border-radius: 30px;
-    font-weight: 200;
-    width: 90vw;
-    overflow-x: hidden;
-    margin-top: 1rem;
-    padding: .2rem;
+  background-color: #3b3b3b !important;
+  border-radius: 30px;
+  font-weight: 200;
+  width: 90vw;
+  overflow-x: hidden;
+  margin-top: 1rem;
+  padding: 0.2rem;
 }
 
-.list-group-link{
-    list-style: none;
-    padding: 0.45rem 0.9rem;
+.list-group-link {
+  list-style: none;
+  padding: 0.45rem 0.9rem;
 }
 
-.list-group-link:hover{
-    cursor: pointer;
-    background-image: linear-gradient(45deg, #7adfff, #ff71cf);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100%;
-    font-weight: 400;
+.list-group-link:hover {
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #7adfff, #ff71cf);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+  font-weight: 400;
 }
 
 .active-tab {
-    border: 1px solid rgb(176, 176, 176);
-    border-radius: 30px;
-    padding: 0.45rem 0.9rem;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 30px;
+  padding: 0.45rem 0.9rem;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
-ul{
-    margin: 0;
+ul {
+  margin: 0;
 }

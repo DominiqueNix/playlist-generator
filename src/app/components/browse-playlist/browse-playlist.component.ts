@@ -6,21 +6,21 @@ import { Utils } from '../../utils/utils';
 @Component({
   selector: 'app-browse-playlist',
   templateUrl: './browse-playlist.component.html',
-  styleUrls: ['./browse-playlist.component.css']
+  styleUrls: ['./browse-playlist.component.css'],
 })
 export class BrowsePlaylistComponent implements OnInit {
   data: any;
   tracks: any;
-  msConversion:any = Utils.msConversion; 
-  constructor(private apiService: ApiService, private route: ActivatedRoute) { }
+  msConversion: any = Utils.msConversion;
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
-    if(id) {
-      this.apiService.getOnePlayList(id).subscribe((data:any) => {
-        this.data = data
-        this.tracks = data.tracks.items 
-      })
+    if (id) {
+      this.apiService.getOnePlayList(id).subscribe((data: any) => {
+        this.data = data;
+        this.tracks = data.tracks.items;
+      });
     }
   }
 }

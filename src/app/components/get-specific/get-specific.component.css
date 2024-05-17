@@ -1,39 +1,40 @@
-.get-specific-container-wrapper{
-    height: 90vh;
+.get-specific-container-wrapper {
+  height: 90vh;
 }
-.get-specific-title{
-    font-weight: 600 !important;
-    font-size: 3rem;
-    background-image: linear-gradient(45deg, #FFD467, #FF7A7A);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.get-specific-title {
+  font-weight: 600 !important;
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, #ffd467, #ff7a7a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 input[type="range"] {
-    accent-color:  #ffa07a;
-    width:100%; 
-    height: 2rem;
-    z-index: 10 !important; 
-    position: relative;
+  accent-color: #ffa07a;
+  width: 100%;
+  height: 2rem;
+  z-index: 10 !important;
+  position: relative;
 }
 
 /* chromium */
-input[type="range" i]::-webkit-slider-thumb{
-    border: 2px #fff solid;
-  }
-  /* Firefox */
+input[type="range" i]::-webkit-slider-thumb {
+  border: 2px #fff solid;
+}
+/* Firefox */
 input[type="range"]::-moz-range-thumb {
-    border: 2px #fff solid;
- }
-
-.get-specific-btn:hover{
-    animation: buttonHover .5s ease-in   forwards ;
+  border: 2px #fff solid;
 }
 
-.get-specific-btn::before{
-  background:linear-gradient(45deg, #FFD467, #FF7A7A);
+.get-specific-btn:hover {
+  animation: buttonHover 0.5s ease-in forwards;
 }
 
-p, .form-label {
-    font-weight: 200;
+.get-specific-btn::before {
+  background: linear-gradient(45deg, #ffd467, #ff7a7a);
+}
+
+p,
+.form-label {
+  font-weight: 200;
 }
