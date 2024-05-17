@@ -10,12 +10,14 @@ export class ApiService{
   
   constructor(private http: HttpClient) { }
 
+  // keeps track of user selected input for the /recommendations endpoint
   recommendationInput: BehaviorSubject<any> = new BehaviorSubject<any>({
     getStartedData: null, getSpecificData: null
   });
 
-  generatedPlaylist:BehaviorSubject<any> = new BehaviorSubject<any>(null);
-
+  /** Retrieves an access token to use spotify endpoints built based on spotify docs
+   * Each api in this file first uses the token retrieved from this function
+   */ 
   getAccessToken(): Observable<{}> {
     const headers = new HttpHeaders({
       'Content-Type':'application/x-www-form-urlencoded'
@@ -28,6 +30,7 @@ export class ApiService{
     return  this.http.post('https://accounts.spotify.com/api/token', body.toString(), {headers})
   }
 
+  // GET five newly released albums from spotify
   getNewAlbums(): Observable<{}>{ 
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
@@ -39,6 +42,7 @@ export class ApiService{
     )
   }
   
+  // GET top nine playlists from spotify
   getTopPlaylists(): Observable<{}>{
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
@@ -49,6 +53,8 @@ export class ApiService{
       })
     )
   }
+
+  // GET one playlist from spotify based on playlist id
   getOnePlayList(playlistId: any): Observable<{}>{
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
@@ -60,6 +66,7 @@ export class ApiService{
     )
   }
 
+  // GET search results based on what type of result the user is searching and the actual query the user is searching for 
   search(type:string, query:string): Observable<{}>{
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
@@ -71,6 +78,7 @@ export class ApiService{
     )
   }
 
+  // GET the genres available for the user to choose from for the /recommendation endpoint
   getGenres(): Observable<{}>{
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
@@ -82,6 +90,7 @@ export class ApiService{
     )
   }
 
+  // method to build the uri that will be used in the /recommendations endpoint based on the recommendationInput that the user has selected 
   uriBuilder(obj: any): Observable<string>{
     if(obj.getStartedInput){
       let uri = 'https://api.spotify.com/v1/recommendations?limit=10'
@@ -128,6 +137,7 @@ export class ApiService{
     }
   }
   
+  // GET a recommend playlist based on the uri built from the uriBuilder method
   getRecommendations(searchString: string): Observable<{}>{
     return this.getAccessToken().pipe(
       switchMap((accessToken:any) => {
