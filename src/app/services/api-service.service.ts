@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
-import {BehaviorSubject, Observable, catchError, map, of, switchMap, tap, throwError} from 'rxjs'
+import {BehaviorSubject, Observable, of, switchMap } from 'rxjs'
 import { environment } from '../../environments/environment';
 
 @Injectable({

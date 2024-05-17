@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ApiService } from '../services/api-service.service';
+import { ApiService } from '../../services/api-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, concatMap, map, of, switchMap } from 'rxjs';
-import { Utils } from '../utils/utils';
+import { Utils } from '../../utils/utils';
 
 @Component({
   selector: 'app-playlist',

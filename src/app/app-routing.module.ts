@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BrowseComponent } from './browse/browse.component';
-import { GetSpecificComponent } from './get-specific/get-specific.component';
-import { GetStartedComponent } from './get-started/get-started.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { PlaylistComponent } from './playlist/playlist.component';
-import { BrowsePlaylistComponent } from './browse-playlist/browse-playlist.component';
+import { BrowseComponent } from './components/browse/browse.component';
+import { GetSpecificComponent } from './components/get-specific/get-specific.component';
+import { GetStartedComponent } from './components/get-started/get-started.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
+import { BrowsePlaylistComponent } from './components/browse-playlist/browse-playlist.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent}, 

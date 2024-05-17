@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api-service.service';
+import { ApiService } from '../../services/api-service.service';
 import { ActivatedRoute } from '@angular/router';
-import { Utils } from '../utils/utils';
+import { Utils } from '../../utils/utils';
 
 @Component({
   selector: 'app-browse-playlist',

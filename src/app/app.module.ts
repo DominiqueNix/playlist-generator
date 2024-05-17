@@ -4,14 +4,14 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { NavComponent } from './nav/nav.component';
-import { BrowseComponent } from './browse/browse.component';
-import { GetStartedComponent } from './get-started/get-started.component';
-import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
-import { GetSpecificComponent } from './get-specific/get-specific.component';
-import { PlaylistComponent } from './playlist/playlist.component';
-import { BrowsePlaylistComponent } from './browse-playlist/browse-playlist.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { NavComponent } from './components/nav/nav.component';
+import { BrowseComponent } from './components/browse/browse.component';
+import { GetStartedComponent } from './components/get-started/get-started.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { GetSpecificComponent } from './components/get-specific/get-specific.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
+import { BrowsePlaylistComponent } from './components/browse-playlist/browse-playlist.component';
 
 @NgModule({
   declarations: [

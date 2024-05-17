@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { ApiService } from './api-service.service';
-import { of, switchMap } from 'rxjs';
+import { of } from 'rxjs';
 
 describe('ApiServiceService', () => {
   let service: ApiService;

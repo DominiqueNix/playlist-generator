@@ -1,10 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
-import { BrowseComponent } from '../browse/browse.component';
-import { GetStartedComponent } from '../get-started/get-started.component';
-import { LandingPageComponent } from '../landing-page/landing-page.component';
-
 import { NavComponent } from './nav.component';
 
 describe('NavComponent', () => {

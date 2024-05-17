@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, map, of, tap } from 'rxjs';
-import { ApiService } from '../services/api-service.service';
+import { ApiService } from '../../services/api-service.service';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 

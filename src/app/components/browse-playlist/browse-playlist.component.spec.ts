@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap, RouterModule } from '@angular/router';
-import { ApiService } from '../services/api-service.service';
-import { MockApiService } from '../services/mock-api.service';
+import { ApiService } from '../../services/api-service.service';
+import { MockApiService } from '../../services/mock-api.service';
 
 import { BrowsePlaylistComponent } from './browse-playlist.component';
 
