@@ -2,8 +2,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { of } from 'rxjs';
-import { ApiService } from '../services/api-service.service';
-import { MockApiService } from '../services/mock-api.service';
+import { ApiService } from '../../services/api-service.service';
+import { MockApiService } from '../../services/mock-api.service';
 
 import { GetStartedComponent } from './get-started.component';
 

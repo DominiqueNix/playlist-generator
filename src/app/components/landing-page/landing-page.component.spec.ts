@@ -36,7 +36,6 @@ describe('LandingPageComponent', () => {
   it('should have a button with the correct link', () => {
     const html = fixture.nativeElement as HTMLElement;
     const a = html.querySelector('a')
-    console.log(a?.getAttribute('routerLink'))
     expect(a?.children[0]).toBeTruthy()
     expect(a?.getAttribute('routerLink')).toBe('/getstarted')
   })
