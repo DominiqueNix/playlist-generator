@@ -125,16 +125,4 @@ describe('GetStartedComponent', () => {
 
     expect(actual).toEqual(['pop', 'rock'])
   })
-
-  // it('should update recommendationInput when next() is called', () => {
-  //   component.chosenCriteria = [{type: 'type', name: 'test1'},{type: 'type', name: 'test2', id: '2'}]
-  //   component.next();
-  //   let actual;
-
-  //   mockApiService.recommendationInput.subscribe((data: any) => {
-  //     actual = data
-  //   })
-  //   expect(actual).toEqual({getStartedInput: [{type: 'type', name: 'test1'},{type: 'type', name: 'test2', id: '2'}]})
-  // })
-
 });
