@@ -1,6 +1,10 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActivatedRoute, convertToParamMap, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  convertToParamMap,
+  RouterModule,
+} from '@angular/router';
 import { ApiService } from '../../services/api-service.service';
 import { MockApiService } from '../../services/mock-api.service';
 
@@ -12,16 +16,15 @@ describe('BrowseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BrowseComponent ], 
-      imports: [HttpClientModule, RouterModule.forRoot([])], 
+      declarations: [BrowseComponent],
+      imports: [HttpClientModule, RouterModule.forRoot([])],
       providers: [
         {
-          provide: ApiService, 
-          useClass: MockApiService
-        }
-      ]
-    })
-    .compileComponents();
+          provide: ApiService,
+          useClass: MockApiService,
+        },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BrowseComponent);
     component = fixture.componentInstance;
@@ -33,22 +36,22 @@ describe('BrowseComponent', () => {
   });
 
   it('should have playlists', () => {
-    expect(component.newAlbums).toBeTruthy()
-    expect(component.newAlbums.albums.items[0].name).toEqual('test')
-  })
+    expect(component.newAlbums).toBeTruthy();
+    expect(component.newAlbums.albums.items[0].name).toEqual('test');
+  });
 
-  it('should have albums', () =>{
-    expect(component.topPlaylists).toBeTruthy()
-    expect(component.topPlaylists.playlists.items[0].name).toEqual("playlist")
-  })
-
-  it('should have nine playlist divs', () => {
-    let html = fixture.nativeElement as HTMLElement
-   expect(html.querySelector('.gallery')?.children.length).toBe(9)
-  })
+  it('should have albums', () => {
+    expect(component.topPlaylists).toBeTruthy();
+    expect(component.topPlaylists.playlists.items[0].name).toEqual('playlist');
+  });
 
   it('should have nine playlist divs', () => {
-    let html = fixture.nativeElement as HTMLElement
-   expect(html.querySelector('.gallery')?.children.length).toBe(9)
-  })
+    let html = fixture.nativeElement as HTMLElement;
+    expect(html.querySelector('.gallery')?.children.length).toBe(9);
+  });
+
+  it('should have nine playlist divs', () => {
+    let html = fixture.nativeElement as HTMLElement;
+    expect(html.querySelector('.gallery')?.children.length).toBe(9);
+  });
 });

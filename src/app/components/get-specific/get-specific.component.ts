@@ -6,32 +6,34 @@ import { map, switchMap } from 'rxjs';
 @Component({
   selector: 'app-get-specific',
   templateUrl: './get-specific.component.html',
-  styleUrls: ['./get-specific.component.css']
+  styleUrls: ['./get-specific.component.css'],
 })
 export class GetSpecificComponent implements OnInit {
-  currentRecInput: any; 
+  currentRecInput: any;
   options: any = {
-    popularity: null, 
-    energy: null, 
+    popularity: null,
+    energy: null,
     danceability: null,
-    acoustics: null 
-    
-  }
+    acoustics: null,
+  };
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
-    this.apiService.recommendationInput.subscribe((data:any) => {
-      this.currentRecInput = data.getStartedInput
-    })
+    this.apiService.recommendationInput.subscribe((data: any) => {
+      this.currentRecInput = data.getStartedInput;
+    });
   }
 
-  sliderChange(e:any){
-    this.options[e.target.id] = Math.round(e.target.value)
+  sliderChange(e: any) {
+    this.options[e.target.id] = Math.round(e.target.value);
   }
 
-  generatePlaylist(){
-    this.apiService.recommendationInput.next({getStartedInput: this.currentRecInput, getSpecificInput: this.options})
-    this.router.navigate(['/playlist'])
+  generatePlaylist() {
+    this.apiService.recommendationInput.next({
+      getStartedInput: this.currentRecInput,
+      getSpecificInput: this.options,
+    });
+    this.router.navigate(['/playlist']);
   }
 }

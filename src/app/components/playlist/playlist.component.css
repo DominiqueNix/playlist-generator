@@ -1,71 +1,66 @@
-.playlist-container-wrapper{
-    margin-top: 5%;
-    margin-bottom: 5%;
+.playlist-container-wrapper {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.playlist-title{
-    font-weight: 600 !important;
-    font-size: 3rem;
-    background-image: linear-gradient(45deg, #81FF86, #70F6FF);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 5%;
+.playlist-title {
+  font-weight: 600 !important;
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, #81ff86, #70f6ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5%;
 }
 
-th{
-    color: #acacac;
-    font-weight: 200;
-    padding: .5rem;
+th {
+  color: #acacac;
+  font-weight: 200;
+  padding: 0.5rem;
 }
 
-td{
-    font-weight: 200;
-    border-top: #606060 solid 1px;  
-    max-width: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: .5rem;
+td {
+  font-weight: 200;
+  border-top: #606060 solid 1px;
+  max-width: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.5rem;
 }
 
-tr:last-child{
-    border-bottom: #606060 solid 1px; 
+tr:last-child {
+  border-bottom: #606060 solid 1px;
 }
 
-.track-name-col{
-    max-width: 20vw;  
+.track-name-col {
+  max-width: 20vw;
 }
 
-.playlist-btn{
-    position: relative;
-    background-color: #3b3b3b !important;
-    border-radius: 20px;
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: 200;
-    margin-top: 5% !important;
-    border-width: 5px;
-    border: 0 solid transparent;
+.playlist-btn {
+  position: relative;
+  background-color: #3b3b3b !important;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 200;
+  margin-top: 5% !important;
+  border-width: 5px;
+  border: 0 solid transparent;
 }
 
-.playlist-btn:hover{
-    animation: buttonHover .5s ease-in   forwards ;
+.playlist-btn:hover {
+  animation: buttonHover 0.5s ease-in forwards;
 }
 
-
-.playlist-btn::before{
-    content: "";
+.playlist-btn::before {
+  content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50px; 
-  padding: 3px; 
-  background:linear-gradient(45deg, #81FF86, #70F6FF); 
-  mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  border-radius: 50px;
+  padding: 3px;
+  background: linear-gradient(45deg, #81ff86, #70f6ff);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }

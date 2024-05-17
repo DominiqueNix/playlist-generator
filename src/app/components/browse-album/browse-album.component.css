@@ -1,0 +1,81 @@
+.playlist-container-wrapper {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.playlist-title {
+  font-weight: 600 !important;
+  font-size: 2rem;
+  background-image: linear-gradient(45deg, #81ff86, #70f6ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 500px;
+  word-wrap: normal;
+}
+
+.artist-name {
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  color: rgb(199, 199, 199);
+}
+
+th {
+  color: #acacac;
+  font-weight: 200;
+  padding: 0.5rem;
+}
+
+td {
+  font-weight: 200;
+  border-top: #606060 solid 1px;
+  max-width: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.5rem;
+}
+
+tr:last-child {
+  border-bottom: #606060 solid 1px;
+}
+
+.track-name-col {
+  max-width: 20vw;
+}
+
+.browse-album-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.album-pic {
+  margin: 0 3rem 3rem 0;
+}
+table {
+  width: 80vw;
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (max-width: 40em) {
+  .browse-album-header {
+    flex-direction: column;
+  }
+  .album-pic {
+    margin: 0 0 3rem 0;
+  }
+
+  .playlist-title {
+    width: fit-content;
+    text-align: center;
+  }
+  .title-subtitle-container {
+    align-items: center;
+  }
+
+  .inner-container {
+    align-items: center;
+  }
+}

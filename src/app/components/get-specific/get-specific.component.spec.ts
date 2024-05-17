@@ -10,10 +10,9 @@ describe('GetSpecificComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetSpecificComponent ],
-      imports: [HttpClientModule, RouterModule.forRoot([])]
-    })
-    .compileComponents();
+      declarations: [GetSpecificComponent],
+      imports: [HttpClientModule, RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GetSpecificComponent);
     component = fixture.componentInstance;
@@ -24,19 +23,19 @@ describe('GetSpecificComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have four input sliders', () =>{
-    let html = fixture.nativeElement as HTMLElement
-    
-    expect(html.querySelectorAll('input').length).toBe(4)
-  })
+  it('should have four input sliders', () => {
+    let html = fixture.nativeElement as HTMLElement;
 
-  it('should update the options object when sliderChange() is called', () =>{
-    component.sliderChange({target: {id: 'popularity', value: 2}})
-    expect(component.options).toEqual({popularity: 2, 
-      energy: null, 
+    expect(html.querySelectorAll('input').length).toBe(4);
+  });
+
+  it('should update the options object when sliderChange() is called', () => {
+    component.sliderChange({ target: { id: 'popularity', value: 2 } });
+    expect(component.options).toEqual({
+      popularity: 2,
+      energy: null,
       danceability: null,
-      acoustics: null })
-    
-  })
-
+      acoustics: null,
+    });
+  });
 });

@@ -6,6 +6,7 @@ import { GetStartedComponent } from './components/get-started/get-started.compon
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
 import { BrowsePlaylistComponent } from './components/browse-playlist/browse-playlist.component';
+import { BrowseAlbumComponent } from './components/browse-album/browse-album.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent}, 
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'getstarted', component: GetStartedComponent}, 
   {path: 'getspecific', component: GetSpecificComponent}, 
   {path: 'playlist', component: PlaylistComponent}, 
-  {path: 'browseplaylist/:id', component: BrowsePlaylistComponent}
+  {path: 'browseplaylist/:id', component: BrowsePlaylistComponent}, 
+  {path: 'browsealbum/:id', component: BrowseAlbumComponent}
 ];
 
 @NgModule({
