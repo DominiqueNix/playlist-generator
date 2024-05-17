@@ -41,6 +41,18 @@ export class ApiService{
       })
     )
   }
+
+  // GET one albums
+  getOneAlbum(albumId: any): Observable<{}>{
+    return this.getAccessToken().pipe(
+      switchMap((accessToken:any) => {
+         const headers = {
+          'Authorization':`${accessToken.token_type} ${accessToken.access_token}`
+        };
+        return this.http.get(`https://api.spotify.com/v1/albums/${albumId}`, {headers})
+      })
+    )
+  }
   
   // GET top nine playlists from spotify
   getTopPlaylists(): Observable<{}>{

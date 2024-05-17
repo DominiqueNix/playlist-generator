@@ -1,1 +1,26 @@
-<p>browse-album works!</p>
+<div class="playlist-container-wrapper d-flex justify-content-center align-items-center">
+    <div *ngIf="data" class="d-flex flex-column inner-container">
+        <div class="browse-album-header">
+            <img class="album-pic" [src]="data.images[1].url"/>
+            <div class="d-flex flex-column title-subtitle-container">
+                <h1 class="playlist-title">{{data.name.toUpperCase()}}</h1>
+                <h4 class="artist-name">{{data.artists[0].name}}</h4>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>Track</th>    
+                <th>Artist</th> 
+                <th>Time</th>
+            </tr>
+            <tr *ngFor=" let track of data.tracks.items">
+                <td class="track-name-col">
+                   <span>{{track.name}}</span>
+                </td>
+                <td class="track-name-col">{{track.artists[0].name}}<div *ngIf="track.artists.length > 1"> ft. <span *ngFor="let ft of track.artists">{{ft.name === track.artists[0].name ? "" : ft.name}}</span></div>
+                </td>
+                <td class="track-name-col">{{msConversion(track.duration_ms)}}</td>  
+            </tr>
+        </table>
+    </div>    
+</div>

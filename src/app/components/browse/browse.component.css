@@ -123,6 +123,10 @@ td{
     padding: .5rem;
 }
 
+tr:hover{
+    background-color: #acacac;
+}
+
 tr:last-child{
     border-bottom: #606060 solid 1px; 
 }

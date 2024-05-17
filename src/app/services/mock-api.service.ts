@@ -117,6 +117,48 @@ export class MockApiService extends ApiService{
         }
       })
   }
+
+  override getOneAlbum(albumId: any): Observable<{}> {
+      return of({
+        "artists": [
+          {"name": "artist 1"}, 
+          {"name": "artist 2"}
+        ], 
+        "name": "test album name",
+        "images": [
+          {"url": 'google.com'}, 
+          {"url": 'google.com'}, 
+          {"url": 'google.com'}, 
+        ],
+        "tracks": {
+          "items": [
+            {
+              "name": "track 1", 
+              "duration_ms": 0, 
+              "artists": [
+                {
+                  "name": "track artist"
+                }
+              ]
+            }, 
+            {
+              "name": "track 2", 
+              "duration_ms": 0, 
+              "artists": [
+                {
+                  "name": "track artist"
+                }, 
+                {
+                  "name": "track artist 2"
+                }
+              ]
+            }
+          ]
+        }
+
+      })
+  }
+
   override getNewAlbums(): Observable<{}> {
       return of({
         "albums": {

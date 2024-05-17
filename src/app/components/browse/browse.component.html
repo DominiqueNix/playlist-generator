@@ -39,7 +39,7 @@
                 <th>Tracks</th>
                 <th>Release date</th>
                 </tr>
-                <tr *ngFor=" let album of newAlbums.albums.items">
+                <tr *ngFor=" let album of newAlbums.albums.items" [routerLink]="'/browsealbum/' + album.id">
                     <td class="img" class="track-name-col">
                     <img [src]="album.images[1].url"/> 
                     </td>

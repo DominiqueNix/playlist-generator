@@ -12,6 +12,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { GetSpecificComponent } from './components/get-specific/get-specific.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
 import { BrowsePlaylistComponent } from './components/browse-playlist/browse-playlist.component';
+import { BrowseAlbumComponent } from './components/browse-album/browse-album.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrowsePlaylistComponent } from './components/browse-playlist/browse-pla
     GetStartedComponent,
     GetSpecificComponent,
     PlaylistComponent,
-    BrowsePlaylistComponent
+    BrowsePlaylistComponent, 
+    BrowseAlbumComponent
   ],
   imports: [
     BrowserModule,
